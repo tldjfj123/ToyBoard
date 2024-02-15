@@ -39,7 +39,6 @@ public class CommentService {
         response.setUserId(savedComment.getContent());
         response.setCommentId(savedComment.getId());
         response.setPostId(post.getId());
-        response.setUpdatedAt(savedComment.getUpdatedAt());
         response.setCreatedAt(savedComment.getCreatedAt());
         response.setContent(savedComment.getContent());
 
@@ -70,7 +69,6 @@ public class CommentService {
             comment.setUserId(memberRepository.findById(memberId).get().getUserId());
             comment.setPostId(foundComment.getPost().getId());
             comment.setCommentId(foundComment.getId());
-            comment.setUpdatedAt(foundComment.getUpdatedAt());
             comment.setCreatedAt(foundComment.getCreatedAt());
             comment.setContent(foundComment.getContent());
 
@@ -89,7 +87,6 @@ public class CommentService {
 
             comment.setPostId(foundComment.getPost().getId());
             comment.setCommentId(foundComment.getId());
-            comment.setUpdatedAt(foundComment.getUpdatedAt());
             comment.setCreatedAt(foundComment.getCreatedAt());
             comment.setContent(foundComment.getContent());
 

@@ -41,7 +41,6 @@ public class CommentController {
             response.setCommentId(comment.get().getId());
             response.setContent(comment.get().getContent());
             response.setCreatedAt(comment.get().getCreatedAt());
-            response.setUpdatedAt(comment.get().getUpdatedAt());
 
             return ResponseEntity.ok(response);
         }
