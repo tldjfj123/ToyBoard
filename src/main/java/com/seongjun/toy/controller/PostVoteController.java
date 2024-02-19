@@ -27,7 +27,7 @@ public class PostVoteController {
         return new ResponseEntity<>(registeredPostVote, HttpStatus.CREATED);
     }
 
-    @DeleteMapping()
+    @DeleteMapping
     public ResponseEntity<Void> deletePostVote(@RequestBody PostVoteRequest request) {
         boolean deleted = postVoteService.deletePostVote(request);
 
