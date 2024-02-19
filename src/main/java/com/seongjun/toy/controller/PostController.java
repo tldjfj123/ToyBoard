@@ -39,6 +39,7 @@ public class PostController {
 
             response.setUserId(post.get().getMember().getUserId());
             response.setTitle(post.get().getTitle());
+            response.setPostId(postId);
             response.setContent(post.get().getContent());
             response.setCreatedAt(post.get().getCreatedAt());
             response.setUpdatedAt(post.get().getUpdatedAt());

@@ -43,6 +43,7 @@ public class Post {
     @UpdateTimestamp
     private LocalDateTime updatedAt = LocalDateTime.now();
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
