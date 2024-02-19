@@ -36,7 +36,7 @@ public class CommentService {
         Comment savedComment = commentRepository.save(comment);
 
         CommentResponse response = new CommentResponse();
-        response.setUserId(savedComment.getContent());
+        response.setUserId(savedComment.getMember().getUserId());
         response.setCommentId(savedComment.getId());
         response.setPostId(post.getId());
         response.setCreatedAt(savedComment.getCreatedAt());
@@ -85,6 +85,7 @@ public class CommentService {
         for (Comment foundComment : foundComments) {
             CommentResponse comment = new CommentResponse();
 
+            comment.setUserId(foundComment.getMember().getUserId());
             comment.setPostId(foundComment.getPost().getId());
             comment.setCommentId(foundComment.getId());
             comment.setCreatedAt(foundComment.getCreatedAt());
